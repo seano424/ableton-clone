@@ -3,6 +3,7 @@ import { Jost } from 'next/font/google'
 
 import Navbar from './components/Navbar'
 import MiniNavbar from './components/MiniNavbar'
+import Hero from './components/Hero'
 
 const jost = Jost({
   display: 'swap',
@@ -30,6 +31,7 @@ export default function Home() {
     <main className={clsx(jost.className)}>
       <Navbar />
       <MiniNavbar links={links} />
+      <Hero />
     </main>
   )
 }

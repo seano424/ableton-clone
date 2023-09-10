@@ -13,7 +13,7 @@ export default function MiniNavbar({
   links,
 }: MiniNavbarProps) {
   return (
-    <ul className='relative mt-[2px] flex items-center gap-10 bg-white px-5 py-5 capitalize xl:container lg:px-8'>
+    <ul className='relative mt-[2px] flex items-center gap-10 bg-white px-5 py-4 capitalize xl:container lg:px-9'>
       {links.map(({ href, label, primary }) => (
         <Link
           className={clsx(

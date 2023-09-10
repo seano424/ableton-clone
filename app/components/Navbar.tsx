@@ -99,7 +99,7 @@ function Navbar() {
   const [isMegaMenuOpen, setMegaMenuOpen] =
     useState(false)
   return (
-    <nav className='flex flex-col gap-10 bg-white px-5 py-5 xl:container xl:px-8'>
+    <nav className='flex flex-col gap-10 bg-white px-5 py-4 xl:container xl:px-9'>
       {/* Desktop */}
       <div className='hidden items-center justify-between xl:flex'>
         <ul className='flex items-center gap-10'>
@@ -185,8 +185,8 @@ function Navbar() {
           'hidden flex-col gap-10 xl:flex'
         )}
       >
-        <div className='flex flex-col gap-5'>
-          <h4 className='text-3xl font-medium'>
+        <div className='flex flex-col gap-4'>
+          <h4 className='text-3xl'>
             More on Ableton.com:
           </h4>
           <ul className='flex gap-10 text-lg capitalize text-gray-600'>
@@ -205,8 +205,8 @@ function Navbar() {
             )}
           </ul>
         </div>
-        <div className='flex flex-col gap-5'>
-          <h4 className='text-3xl font-medium'>
+        <div className='flex flex-col gap-4'>
+          <h4 className='text-3xl'>
             More from Ableton:
           </h4>
           <ul className='flex gap-10'>
@@ -230,7 +230,7 @@ function Navbar() {
       </div>
 
       {/* Mobile */}
-      <div className='flex items-center gap-10 xl:hidden'>
+      <div className='flex items-center gap-8 xl:hidden'>
         <svg
           aria-hidden='true'
           focusable='false'
@@ -242,7 +242,25 @@ function Navbar() {
         >
           <path d='M0 0h3v21H0zM6 0h3v21H6zM12 0h3v21h-3zM18 0h3v21h-3zM24 18h21v3H24zM24 12h21v3H24zM24 6h21v3H24zM24 0h21v3H24z'></path>
         </svg>
-        <button>Menu</button>
+        <button className='flex items-center gap-2 text-lg font-medium'>
+          Menu
+          <span>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              stroke-width='1.5'
+              stroke='currentColor'
+              className='h-6 w-6'
+            >
+              <path
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                d='M19.5 8.25l-7.5 7.5-7.5-7.5'
+              />
+            </svg>
+          </span>
+        </button>
       </div>
     </nav>
   )
