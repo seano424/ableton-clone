@@ -41,7 +41,7 @@ export default function MiniNavbar({
   return (
     <div
       className={clsx(
-        'sticky top-0 flex items-center gap-10 border-t-2 border-stone-100 bg-white px-5 py-4 capitalize xl:container lg:px-9',
+        'sticky top-0 flex items-center gap-5 border-t-2 border-stone-100 bg-white px-5 py-4 capitalize xl:container lg:px-9 xl:gap-10',
         'transform transition-all duration-700 ease-in-out',
         scrollPosition > 400 &&
           !isScrollingUp &&

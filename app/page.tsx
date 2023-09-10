@@ -31,8 +31,10 @@ export default function Home() {
     <main className={clsx(jost.className)}>
       <Navbar />
       <MiniNavbar links={links} />
-      <Hero />
-      <div className='min-h-screen'></div>
+      <div className='bg-white px-16 xl:px-44'>
+        <Hero />
+        <div className='min-h-screen border-8 bg-theme-blue'></div>
+      </div>
     </main>
   )
 }
