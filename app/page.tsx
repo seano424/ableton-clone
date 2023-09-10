@@ -32,6 +32,7 @@ export default function Home() {
       <Navbar />
       <MiniNavbar links={links} />
       <Hero />
+      <div className='min-h-screen'></div>
     </main>
   )
 }
