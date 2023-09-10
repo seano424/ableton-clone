@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import clsx from 'clsx';
-import React, { useState } from 'react';
-import Link from 'next/link';
+import clsx from 'clsx'
+import React, { useState } from 'react'
+import Link from 'next/link'
 
 const links = [
   {
@@ -33,7 +33,7 @@ const links = [
     href: '/',
     label: 'help',
   },
-];
+]
 
 const onAbletonLinks = [
   {
@@ -66,7 +66,7 @@ const onAbletonLinks = [
     href: '/',
     label: 'Apprenticeships',
   },
-];
+]
 
 const fromAbletonLinks = [
   {
@@ -93,14 +93,15 @@ const fromAbletonLinks = [
     sublabel:
       'Some tips from 74 Creative Strategies for Electronic Producers.',
   },
-];
+]
 
 function Navbar() {
   const [isMegaMenuOpen, setMegaMenuOpen] =
-    useState(false);
+    useState(false)
   return (
-    <nav className='flex flex-col gap-10 border-b border-stone-100 py-3'>
-      <div className='flex items-center justify-between'>
+    <nav className='flex flex-col gap-10 bg-white px-5 py-5 xl:container xl:px-8'>
+      {/* Desktop */}
+      <div className='hidden items-center justify-between xl:flex'>
         <ul className='flex items-center gap-10'>
           <svg
             aria-hidden='true'
@@ -128,7 +129,7 @@ function Navbar() {
                 (prevState) => !prevState
               )
             }
-            className='text-theme-orange flex items-center gap-2 text-lg capitalize'
+            className='flex items-center gap-2 text-lg capitalize text-theme-orange'
           >
             More{' '}
             <span>
@@ -168,7 +169,7 @@ function Navbar() {
         </ul>
         <ul className='flex items-center gap-10'>
           <Link
-            className='text-theme-blue text-lg'
+            className='text-lg text-theme-blue'
             href={'/'}
           >
             Try Live For Free
@@ -180,8 +181,8 @@ function Navbar() {
       </div>
       <div
         className={clsx(
-          !isMegaMenuOpen && 'hidden',
-          'flex flex-col gap-10'
+          !isMegaMenuOpen && 'xl:hidden',
+          'hidden flex-col gap-10 xl:flex'
         )}
       >
         <div className='flex flex-col gap-5'>
@@ -192,6 +193,7 @@ function Navbar() {
             {onAbletonLinks.map(
               ({ href, label, primary }) => (
                 <Link
+                  key={label}
                   className={clsx(
                     primary && 'text-theme-orange'
                   )}
@@ -226,8 +228,24 @@ function Navbar() {
           </ul>
         </div>
       </div>
+
+      {/* Mobile */}
+      <div className='flex items-center gap-10 xl:hidden'>
+        <svg
+          aria-hidden='true'
+          focusable='false'
+          xmlns='http://www.w3.org/2000/svg'
+          className='h-10 w-16'
+          width='45'
+          height='21'
+          viewBox='0 0 45 21'
+        >
+          <path d='M0 0h3v21H0zM6 0h3v21H6zM12 0h3v21h-3zM18 0h3v21h-3zM24 18h21v3H24zM24 12h21v3H24zM24 6h21v3H24zM24 0h21v3H24z'></path>
+        </svg>
+        <button>Menu</button>
+      </div>
     </nav>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
