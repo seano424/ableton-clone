@@ -1,0 +1,5 @@
+@layer utilities {
+  .px-base {
+    @apply px-16 xl:px-44;
+  }
+}
