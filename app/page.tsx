@@ -3,6 +3,7 @@ import { Jost } from 'next/font/google'
 
 import Navbar from './components/Navbar'
 import MiniNavbar from './components/MiniNavbar'
+import TextBlock from './components/TextBlock'
 import Hero from './components/Hero'
 
 const jost = Jost({
@@ -33,7 +34,10 @@ export default function Home() {
       <MiniNavbar links={links} />
       <div className='px-base bg-white'>
         <Hero />
-        <div className='min-h-screen border-8 bg-theme-blue'></div>
+        <TextBlock
+          paragraph1='We make Live, Push and Link — unique software and hardware for music creation and performance. With these products, our community of users creates amazing things.'
+          paragraph2='Ableton was founded in 1999 and released the first version of Live in 2001. Our products are used by a community of dedicated musicians, sound designers, and artists from across the world.'
+        />
       </div>
     </main>
   )
