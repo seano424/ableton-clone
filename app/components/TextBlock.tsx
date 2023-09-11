@@ -8,7 +8,7 @@ export default function TextBlock({
   paragraph2 = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nulla beatae rerum illum ex cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, ullam.',
 }: TextBlockProps) {
   return (
-    <div className='px-base flex flex-col gap-4 py-12 leading-relaxed'>
+    <div className='px-base flex flex-col gap-4 leading-relaxed'>
       <p className='text-lg font-medium xl:text-3xl'>
         {paragraph1}
       </p>

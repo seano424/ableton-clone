@@ -60,7 +60,7 @@ export default function NavbarDesktop() {
                 >
                   <path
                     stroke-linecap='round'
-                    stroke-linejoin='round'
+                    strokeLinejoin='round'
                     d='M19.5 12h-15'
                   />
                 </svg>
@@ -75,7 +75,7 @@ export default function NavbarDesktop() {
                 >
                   <path
                     stroke-linecap='round'
-                    stroke-linejoin='round'
+                    strokeLinejoin='round'
                     d='M12 4.5v15m7.5-7.5h-15'
                   />
                 </svg>
